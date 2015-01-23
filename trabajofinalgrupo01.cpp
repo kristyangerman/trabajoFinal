@@ -1,7 +1,8 @@
-# include<conio.h>
+# include <conio.h>
 main()
 {
 	int s,r=1;
+   char seleccion,repetir;
 	while (r==1)
 	{
 		clrscr();
