@@ -14,7 +14,7 @@ main()
       gotoxy(15,7),  cprintf("              INTEGRANTES");
       gotoxy(1,12), cprintf("1. GENERAR TABLAS DE VERDAD");
 		gotoxy(1,13), cprintf("2. VER TABLAS CON DOS ENTRADAS");
-		gotoxy(1,14), cprintf("3. GENERAR Y VER TABLAS CON DOS ENTRADAS");
+		gotoxy(1,14), cprintf("3. GENERAR Y VER TABLAS CON N ENTRADAS");
 		gotoxy(1,15), cprintf("4. Salir ");
 		textcolor(GREEN);
 		gotoxy(15,18), cprintf("OPERACION A REALIZAR");
@@ -61,7 +61,41 @@ main()
     getch() ;
     }break;
 			case '2': cprintf("");getch();break;
-			case '3': cprintf("");getch();break;
+			case '3':
+         {
+int i=1,j=1,n,s;
+bool v[10],r=0;
+
+  cout<<"INTRODUCIR EL NUMERO DE VARIABLES :";
+
+    cin>>n;
+     cout<<"INTRODUCIR LA OPERACION REQUERIDA :";
+     cout<<"1-------OR :";
+     cout<<"2-------AND :";
+    cin>>s;
+if (s==1)
+{
+while(i<=n)
+{
+ cout<<"INTRODUCIR EL VALOR DE VERDAD CORRESPONDIENTE ";
+cin>>v[i];
+i++;
+}
+while (j<=n)
+{
+ r=(r||v[j]);
+ j++ ;
+}
+cout<<"EL VALOR DE VERDAD ES ";
+ cout << r << endl;
+}
+else
+{
+}
+
+getch();
+}
+break;
          case '4': r=0;break;
 			default:
 			{
