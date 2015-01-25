@@ -11,7 +11,7 @@ main()
 		gotoxy(15,1),  cprintf("             PROYECTO FINAL");
       gotoxy(15,3),  cprintf("ESCUELA SUPERIOR POLITECNICA DE CHIMBORAZO");
       gotoxy(15,5),  cprintf("        LENGUJAE DE PROGRAMACION");
-      gotoxy(15,7),  cprintf("              INTEGRANTES");
+      gotoxy(15,7),  cprintf("              INTEGRANTES:");
       gotoxy(1,12), cprintf("1. GENERAR TABLAS DE VERDAD");
 		gotoxy(1,13), cprintf("2. VER TABLAS CON DOS ENTRADAS");
 		gotoxy(1,14), cprintf("3. GENERAR Y VER TABLAS CON N ENTRADAS");
@@ -60,7 +60,68 @@ main()
     cout << resultado << endl;
     getch() ;
     }break;
-			case '2': cprintf("");getch();break;
+			case '2':
+ {
+int n;
+cout<<"INGRESAR EL NUMERO DE LA TABLA REQUERIDA "<< "\n";
+cout<<" 1 --------OR "<< "\n";
+cout<<" 2 --------AND "<< "\n";
+cout<<" 3 --------XOR "<< "\n";
+cout<<" 4 --------NAND "<< "\n";
+cout<<" 5 --------NOR "<< "\n";
+
+cin>>n;
+if(n == 1)
+   {
+     cout<<"OR"<< "\n";
+     cout<<"     A      B      S"<< "\n"<< "\n";
+     cout<<"     0      0      0 "<< "\n";
+     cout<<"     0      1      1"<< "\n";
+     cout<<"     1      0      1"<< "\n";
+     cout<<"     1      1      1"<< "\n";
+   }
+else if(n == 2)
+   {
+     cout<<"AND"<< "\n";
+     cout<<"     A      B      S"<< "\n"<< "\n";
+     cout<<"     0      0      0 "<< "\n";
+     cout<<"     0      1      0"<< "\n";
+     cout<<"     1      0      0"<< "\n";
+     cout<<"     1      1      1"<< "\n";
+      }
+      else if(n == 3)
+   {
+     cout<<"XOR"<< "\n";
+     cout<<"     A      B      S"<< "\n"<< "\n";
+     cout<<"     0      0      0 "<< "\n";
+     cout<<"     0      1      1"<< "\n";
+     cout<<"     1      0      1"<< "\n";
+     cout<<"     1      1      0"<< "\n";
+      }
+      else if(n == 4)
+   {
+     cout<<"NAND"<< "\n";
+     cout<<"     A      B      S"<< "\n"<< "\n";
+     cout<<"     0      0      1 "<< "\n";
+     cout<<"     0      1      1"<< "\n";
+     cout<<"     1      0      1"<< "\n";
+     cout<<"     1      1      0"<< "\n";
+      }
+      else if(n == 5)
+   {
+     cout<<"NOR"<< "\n";
+     cout<<"     A      B      S"<< "\n"<< "\n";
+     cout<<"     0      0      1 "<< "\n";
+     cout<<"     0      1      0"<< "\n";
+     cout<<"     1      0      0"<< "\n";
+     cout<<"     1      1      0"<< "\n";
+      }
+
+    getch();
+}
+
+
+         break;
 			case '3':
          {
 int i=1,j=1,n,s;
