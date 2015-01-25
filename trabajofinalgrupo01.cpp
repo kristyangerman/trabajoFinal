@@ -7,30 +7,28 @@ main()
 	while (r==1)
 	{
 		clrscr();
-		textcolor(RED);
-		gotoxy(15,8),  cprintf("PROYECTO FINAL");
-      gotoxy(15,8),  cprintf("ESCUELA SUPERIOR POLITECNICA DE CHIMBORAZO");
-      gotoxy(15,8),  cprintf("LENGUJAE DE PROGRAMACION");
-      gotoxy(15,8),  cprintf("INTEGRANTES");
-
-		gotoxy(10,10), cprintf("1. GENERAR TABLAS DE VERDAD");
-		gotoxy(10,12), cprintf("2. VER TABLAS CON DOS ENTRADAS");
-		gotoxy(10,14), cprintf("3. GENERAR Y VER TABLAS CON DOS ENTRADAS");
-		gotoxy(10,18), cprintf("4. Salir ");
+		textcolor(YELLOW);
+		gotoxy(15,1),  cprintf("             PROYECTO FINAL");
+      gotoxy(15,3),  cprintf("ESCUELA SUPERIOR POLITECNICA DE CHIMBORAZO");
+      gotoxy(15,5),  cprintf("        LENGUJAE DE PROGRAMACION");
+      gotoxy(15,7),  cprintf("              INTEGRANTES");
+      gotoxy(1,12), cprintf("1. GENERAR TABLAS DE VERDAD");
+		gotoxy(1,13), cprintf("2. VER TABLAS CON DOS ENTRADAS");
+		gotoxy(1,14), cprintf("3. GENERAR Y VER TABLAS CON DOS ENTRADAS");
+		gotoxy(1,15), cprintf("4. Salir ");
 		textcolor(GREEN);
-		gotoxy(10,20), cprintf("OPERACION A REALIZAR");
-		gotoxy(28,20);
+		gotoxy(15,18), cprintf("OPERACION A REALIZAR");
+		gotoxy(15,20);
       seleccion=getche();
 		textcolor(YELLOW);
-	gotoxy(28,20);
+	   gotoxy(10,23);
 		switch(seleccion)
 		{
-			case '1':
-         cprintf("");
-{
+    case '1':
+    {
     bool p, q;
 
-    cout<<"Introducir el el primer valor de verdad   :";
+    cout<<"Introducir el  primer valor de verdad   :";
 
     cin>>p;
 
@@ -44,7 +42,8 @@ main()
 
     int unsigned operacion_logica;
 
-    cin>>operacion_logica;cout<<"  EL VALOR DE VERDAD ES :  ";
+    cin>>operacion_logica;
+    cout<<"  EL VALOR DE VERDAD ES :  ";
 
     bool resultado;
     switch (operacion_logica)
@@ -60,12 +59,10 @@ main()
     }
     cout << resultado << endl;
     getch() ;
-}
-
-         getch();break;
+    }break;
 			case '2': cprintf("");getch();break;
 			case '3': cprintf("");getch();break;
-         case '4': repetir=0;break;
+         case '4': r=0;break;
 			default:
 			{
 				cprintf("Opcion Invalida");
