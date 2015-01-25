@@ -64,7 +64,7 @@ main()
 			case '3':
          {
 int i=1,j=1,n,s;
-bool v[10],r=0;
+bool v[10],r=0,r1=1;
 
   cout<<"INTRODUCIR EL NUMERO DE VARIABLES :";
 
@@ -91,6 +91,21 @@ cout<<"EL VALOR DE VERDAD ES ";
 }
 else
 {
+while(i<=n)
+{
+ cout<<"INTRODUCIR EL VALOR DE VERDAD CORRESPONDIENTE ";
+cin>>v[i];
+i++;
+}
+while (j<=n)
+{
+ r1=(r1&&v[j]);
+ j++ ;
+}
+cout<<"EL VALOR DE VERDAD ES ";
+ cout << r1 << endl;
+
+
 }
 
 getch();
