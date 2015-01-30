@@ -1,5 +1,6 @@
 # include <conio.h>
 #include <iostream.h>
+#include <fstream>
 main()
 {
 	int s,r=1;
@@ -12,7 +13,11 @@ main()
       gotoxy(15,3),  cprintf("ESCUELA SUPERIOR POLITECNICA DE CHIMBORAZO");
       gotoxy(15,5),  cprintf("        LENGUJAE DE PROGRAMACION");
       gotoxy(15,7),  cprintf("              INTEGRANTES:");
-      gotoxy(1,12), cprintf("1. GENERAR TABLAS DE VERDAD");
+      textcolor(WHITE);
+      gotoxy(1,8), cprintf(" CRISTIAN CHAFLA   (691)");
+      gotoxy(1,9), cprintf(" SEBASTIAN ARCOS   (683)");
+      gotoxy(1,10), cprintf(" PATRICIO GALLEGOS (676)");
+      gotoxy(1,11), cprintf("1. GENERAR TABLAS DE VERDAD CON DOS ENTRADAS");
 		gotoxy(1,13), cprintf("2. VER TABLAS CON DOS ENTRADAS");
 		gotoxy(1,14), cprintf("3. GENERAR Y VER TABLAS CON N ENTRADAS");
 		gotoxy(1,15), cprintf("4. Salir ");
@@ -26,41 +31,51 @@ main()
 		{
     case '1':
     {
-    bool p, q;
-
-    cout<<"Introducir el  primer valor de verdad   :";
-
-    cin>>p;
-
-    cout<<"Introduce el  segundo valor de verdad   :";
-
-    cin>>q;
-
-    cout<<"Introducir la operacion logica :    ";
-
-    cout<<" 1-----> OR"<<"   2------>AND   ";
-
-    int unsigned operacion_logica;
-
-    cin>>operacion_logica;
-    cout<<"  EL VALOR DE VERDAD ES :  ";
-
-    bool resultado;
-    switch (operacion_logica)
-    {
-
-        case (1):
-            resultado  = (p||q);
-            break;
-
-        case (2):
-            resultado  = (p&&q);
-            break;
-    }
-    cout << resultado << endl;
-    getch() ;
-    }break;
-			case '2':
+ofstream almacenamiento("C:/Users/Kristyan/LITERAL 1/TABLAS DE VERDAD.txt",ios::app) ;
+   almacenamiento<<"OR"<< "\n";
+     almacenamiento<<"     A      B      S"<< "\n"<< "\n";
+     almacenamiento<<"     0      0      0 "<< "\n";
+     almacenamiento<<"     0      1      1"<< "\n";
+     almacenamiento<<"     1      0      1"<< "\n";
+     almacenamiento<<"     1      1      1"<< "\n";
+     almacenamiento<<"AND"<< "\n";
+     almacenamiento<<"     A      B      S"<< "\n"<< "\n";
+     almacenamiento<<"     0      0      0 "<< "\n";
+     almacenamiento<<"     0      1      0"<< "\n";
+     almacenamiento<<"     1      0      0"<< "\n";
+     almacenamiento<<"     1      1      1"<< "\n";
+     almacenamiento<<"XOR"<< "\n";
+     almacenamiento<<"     A      B      S"<< "\n"<< "\n";
+     almacenamiento<<"     0      0      0 "<< "\n";
+     almacenamiento<<"     0      1      1"<< "\n";
+     almacenamiento<<"     1      0      1"<< "\n";
+     almacenamiento<<"     1      1      0"<< "\n";
+     almacenamiento<<"NAND"<< "\n";
+     almacenamiento<<"     A      B      S"<< "\n"<< "\n";
+     almacenamiento<<"     0      0      1 "<< "\n";
+     almacenamiento<<"     0      1      1"<< "\n";
+     almacenamiento<<"     1      0      1"<< "\n";
+     almacenamiento<<"     1      1      0"<< "\n";
+     almacenamiento<<"NOR"<< "\n";
+     almacenamiento<<"     A      B      S"<< "\n"<< "\n";
+     almacenamiento<<"     0      0      1 "<< "\n";
+     almacenamiento<<"     0      1      0"<< "\n";
+     almacenamiento<<"     1      0      0"<< "\n";
+     almacenamiento<<"     1      1      0"<< "\n";
+     almacenamiento<<"NOT"<< "\n";
+     almacenamiento<<"     A            S"<< "\n"<< "\n";
+     almacenamiento<<"     0            1 "<< "\n";
+     almacenamiento<<"     0            1"<< "\n";
+     almacenamiento<<"     1            0"<< "\n";
+     almacenamiento<<"     1            0"<< "\n";
+     almacenamiento<<"BUFFER"<< "\n";
+     almacenamiento<<"     A            S"<< "\n"<< "\n";
+     almacenamiento<<"     0            0 "<< "\n";
+     almacenamiento<<"     1            1"<< "\n";
+almacenamiento.close();
+getch();
+}break;
+case '2':
  {
 int n;
 cout<<"INGRESAR EL NUMERO DE LA TABLA REQUERIDA "<< "\n";
@@ -69,6 +84,8 @@ cout<<" 2 --------AND "<< "\n";
 cout<<" 3 --------XOR "<< "\n";
 cout<<" 4 --------NAND "<< "\n";
 cout<<" 5 --------NOR "<< "\n";
+cout<<" 6 --------NOT "<< "\n";
+cout<<" 7 --------BUFFER "<< "\n";
 
 cin>>n;
 if(n == 1)
@@ -115,6 +132,23 @@ else if(n == 2)
      cout<<"     0      1      0"<< "\n";
      cout<<"     1      0      0"<< "\n";
      cout<<"     1      1      0"<< "\n";
+      }
+           else if(n == 6)
+   {
+     cout<<"NOT"<< "\n";
+     cout<<"     A            S"<< "\n"<< "\n";
+     cout<<"     0            1 "<< "\n";
+     cout<<"     0            1"<< "\n";
+     cout<<"     1            0"<< "\n";
+     cout<<"     1            0"<< "\n";
+      }
+                 else if(n == 7)
+   {
+     cout<<"BUFFER"<< "\n";
+     cout<<"     A            S"<< "\n"<< "\n";
+     cout<<"     0            0 "<< "\n";
+     cout<<"     1            1"<< "\n";
+
       }
 
     getch();
