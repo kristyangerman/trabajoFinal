@@ -15,9 +15,9 @@ main()
       gotoxy(15,7),  cprintf("              INTEGRANTES:");
       textcolor(WHITE);
       gotoxy(1,8), cprintf(" CRISTIAN CHAFLA   (691)");
-      gotoxy(1,9), cprintf(" SEBASTIAN ARCOS   (683)");
+      gotoxy(1,9), cprintf(" SEBASTIAN ARCOS   (685)");
       gotoxy(1,10), cprintf(" PATRICIO GALLEGOS (676)");
-      gotoxy(1,11), cprintf("1. GENERAR TABLAS DE VERDAD CON DOS ENTRADAS");
+      gotoxy(1,12), cprintf("1. GENERAR TABLAS DE VERDAD CON DOS ENTRADAS");
 		gotoxy(1,13), cprintf("2. VER TABLAS CON DOS ENTRADAS");
 		gotoxy(1,14), cprintf("3. GENERAR Y VER TABLAS CON N ENTRADAS");
 		gotoxy(1,15), cprintf("4. Salir ");
@@ -158,51 +158,212 @@ else if(n == 2)
          break;
 			case '3':
          {
-int i=1,j=1,n,s;
-bool v[10],r=0,r1=1;
+char s;
+int n,e;
 
-  cout<<"INTRODUCIR EL NUMERO DE VARIABLES :";
-
-    cin>>n;
-     cout<<"INTRODUCIR LA OPERACION REQUERIDA :";
-     cout<<"1-------OR :";
-     cout<<"2-------AND :";
-    cin>>s;
-if (s==1)
+cout<<" 1 --------OR "<< "\n";
+cout<<" 2 --------AND  "<< "\n";
+cout<<" 3 --------XOR "<< "\n";
+cout<<" 4 --------NAND "<< "\n";
+cout<<" 5 --------NOR "<< "\n";
+cout<<" 6 --------NOT "<< "\n";
+cout<<" 7 --------BUFFER "<< "\n";
+cout<<" Seleccionar la tabla de verdad "<< "\n";
+cin>>n;
+cout<<" INGRESAR EL NUMERO DE VARIABLES "<< "\n";
+cin>>e;
+if (n==1) {
+if(e==2){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/OR2.txt");
+while (!ver.eof())
 {
-while(i<=n)
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ if(e==3){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/OR3.txt");
+while (!ver.eof())
 {
- cout<<"INTRODUCIR EL VALOR DE VERDAD CORRESPONDIENTE ";
-cin>>v[i];
-i++;
-}
-while (j<=n)
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ if(e==4){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/OR4.txt");
+while (!ver.eof())
 {
- r=(r||v[j]);
- j++ ;
-}
-cout<<"EL VALOR DE VERDAD ES ";
- cout << r << endl;
-}
-else
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ if(e==5){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/OR5.txt");
+while (!ver.eof())
 {
-while(i<=n)
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ }
+ // PARA LA OTRA TABLA
+ if (n==2) {
+if(e==2){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/AND2.txt");
+while (!ver.eof())
 {
- cout<<"INTRODUCIR EL VALOR DE VERDAD CORRESPONDIENTE ";
-cin>>v[i];
-i++;
-}
-while (j<=n)
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ if(e==3){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/AND3.txt");
+while (!ver.eof())
 {
- r1=(r1&&v[j]);
- j++ ;
-}
-cout<<"EL VALOR DE VERDAD ES ";
- cout << r1 << endl;
-
-
-}
-
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ if(e==4){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/AND4.txt");
+while (!ver.eof())
+{
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ if(e==5){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/AND5.txt");
+while (!ver.eof())
+{
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ }
+ //TABLAS DE LA XOR
+  if (n==3) {
+if(e==2){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/XOR2.txt");
+while (!ver.eof())
+{
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ if(e==3){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/XOR3.txt");
+while (!ver.eof())
+{
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ if(e==4){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/XOR4.txt");
+while (!ver.eof())
+{
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ if(e==5){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/XOR5.txt");
+while (!ver.eof())
+{
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ }
+ // TABLA NAND
+  if (n==4) {
+if(e==2){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/NAND2.txt");
+while (!ver.eof())
+{
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ if(e==3){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/NAND3.txt");
+while (!ver.eof())
+{
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ if(e==4){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/NAND4.txt");
+while (!ver.eof())
+{
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ if(e==5){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/NAND5.txt");
+while (!ver.eof())
+{
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ }
+ //TABLA NOR
+  if (n==5) {
+if(e==2){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/NOR2.txt");
+while (!ver.eof())
+{
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ if(e==3){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/NOR3.txt");
+while (!ver.eof())
+{
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ if(e==4){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/NOR4.txt");
+while (!ver.eof())
+{
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ if(e==5){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/NOR5.txt");
+while (!ver.eof())
+{
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ }
+ //TABLA NOT
+ if(e==6){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/NOT.txt");
+while (!ver.eof())
+{
+ ver.get(s);
+ cout<<s;
+ }
+ }
+ //TABLA BUFFER
+ if(e==7){
+ifstream ver ("C:/Users/Kristyan/LITERAL 1/BUFER.txt");
+while (!ver.eof())
+{
+ ver.get(s);
+ cout<<s;
+ }
+ }
 getch();
 }
 break;
